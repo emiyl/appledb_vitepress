@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run docs:build
+        run: NODE_OPTIONS="--max-old-space-size=24567" npm run docs:build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
