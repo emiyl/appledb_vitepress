@@ -53,7 +53,7 @@ onMounted(async () => {
     :web_image_id="web_image.id"
 />
 
-<h5>Devices</h5>
+<h5 v-if="data.device_group_map" style="margin-block: 1em;">Devices</h5>
 <osDeviceList
     :device_group_map="data.device_group_map"
     :device_map="data.device_map"

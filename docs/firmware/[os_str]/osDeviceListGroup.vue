@@ -74,7 +74,7 @@ for (let src_dev_arr of source_device_map_arr) {
                 <div v-if="props.layer < 1 && props.released">Released {{ props.released }}</div>
             </div>
             <div style="display: flex; flex-flow: row wrap; gap: .5em; margin-top: 1em;">
-                <a class="btn" :href="`/device/group/${props.group_key}.html`">
+                <a class="btn" :href="`/device${props.devices.length > 1 ? '/group' : ''}/${props.group_key}.html`">
                     <font-awesome-icon icon="fa-solid fa-info"/> Device page
                 </a>
                 <template v-for="(download, type) in download_obj">
