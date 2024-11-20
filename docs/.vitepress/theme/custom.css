@@ -1,0 +1,57 @@
+:root {
+    --vp-c-h5: rgb(143,156,168);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+code a {
+    text-decoration: underline !important;
+}
+
+h5 {
+    text-transform: uppercase;
+    color: var(--vp-c-h5);
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    font-weight: 800 !important;
+    padding-block: 1em;
+}
+
+h5:after {
+    content: "";
+    background: var(--vp-c-gray-1);
+    margin-left: 10px;
+    flex-grow: 1;
+    height: 1px;
+}
+
+
+h5.calc:after {
+    margin-left: auto;
+    flex-grow: 0;
+    width: calc(100% - 8em);
+}
+
+.btn {
+    background: var(--vp-c-bg-soft);
+    padding: 7px 15px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    cursor: pointer;
+
+    svg {
+        font-size: 14px;
+        vertical-align: top;
+        padding-top: 5px;
+        margin-right: 6px;
+    }
+}
+
+.box {
+    background: var(--vp-c-bg-soft);
+    padding: 15px 15px;
+    border-radius: 12px;
+}
