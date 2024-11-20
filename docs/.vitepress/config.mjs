@@ -5,10 +5,11 @@ export default defineConfig({
   title: "AppleDB",
   description: "A database of Apple software and devices",
 
+  cleanUrls: true,
   rewrites: {
-    'firmware/:os_str/:key': 'firmware/:os_str/:key.md',
-    'device/group/:group_key': 'device/group/:group_key.md',
-    'device/:key': 'device/:key.md'
+    'firmware/:os_str/:key': 'firmware/:os_str/:key',
+    'device/group/:group_key': 'device/group/:group_key',
+    'device/:key': 'device/:key'
   },
 
   themeConfig: {
