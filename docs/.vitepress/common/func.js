@@ -3,8 +3,10 @@ import * as cdata from './data'
 let process_date = (date_string) => {
     if (!date_string) return null
     const date = new Date(date_string)
+    const timezone_offset = date.getTimezoneOffset()
+    const date_with_offset = new Date(date.getTime() + timezone_offset * 60000);
     const options = { year: 'numeric', month: 'short', day: 'numeric' }
-    return date.toLocaleDateString("en-US", options)    
+    return date_with_offset.toLocaleDateString("en-US", options)
 }
 
 function find_source_arr(sources, key_arr, type) {
