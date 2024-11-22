@@ -38,7 +38,7 @@ function toggle_fw_expanded(key) {
             fw.internal && fw_filter.includes('Internal') ||
             !(fw.beta || fw.rc || fw.internal) && fw_filter.includes('Release')
         )
-    ">
+    " :key="fw.key">
         <deviceFirmwareTableEntry
             :os_str="fw.os_str"
             :version="fw.version"
